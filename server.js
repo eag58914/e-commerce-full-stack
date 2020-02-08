@@ -3,6 +3,10 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 
+//need to figure why this serer is not working
+// require('dotenv').config();
+// require('./config/database');
+
 const app = express();
 
 app.use(logger('dev'));
