@@ -3,11 +3,16 @@ const path = require('path');
 const favicon = require('serve-favicon');
 const logger = require('morgan');
 
-//need to figure why this serer is not working
 require('dotenv').config();
 require('./config/database');
 
+const client_id = process.env.CLIENT_ID;
+const secret = process.env.CLIENT_SECRET;
+
 const app = express();
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
+const queryString = require('querystring');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -25,3 +30,5 @@ const port = process.env.PORT || 3001;
 app.listen(port, () => {
 	console.log(`Express app running on port ${port}`);
 });
+
+//setting up spotify authentication
