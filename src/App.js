@@ -1,9 +1,10 @@
 import React from 'react';
+import Toolbar from '../src/components/Toolbar/Toolbar';
 
 function App() {
 	return (
 		<div>
-			<h1>test</h1>
+			<Toolbar />
 		</div>
 	);
 }
